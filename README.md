@@ -2,13 +2,7 @@
 Developed by: Daanyaal Tahir & Zain Afzal
 
 ## Stack
-- ReactJS
-- Django Rest Framework
-- Docker
-- MySQL
-- Redux
-- Bootstrap
-- React Router
+ReactJS, Django Rest Framework, Docker, MySQL, Redux, Bootstrap, React Router
 
 ## Demo
 ### Homepage
