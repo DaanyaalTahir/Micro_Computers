@@ -1,0 +1,29 @@
+.SectionHeading_Cont {
+  position: relative;
+  margin-top: 20px;
+
+  .heading_cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .text {
+      background: white;
+      padding: 10px;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 600;
+    }
+  }
+
+  .line_cont {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    top: 50%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top: 1px solid #dddce7;
+  }
+}

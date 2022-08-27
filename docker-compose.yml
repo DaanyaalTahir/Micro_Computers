@@ -1,0 +1,49 @@
+version: '3.3'    
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: ./Dockerfiles/frontend
+
+    depends_on:
+      - "mysql"
+
+    ports:
+      - "80:3000"
+    networks:
+      - micro_computers
+  backend:
+    build:
+      context: ./
+      dockerfile: ./Dockerfiles/backend
+    links:
+      - mysql 
+
+    depends_on:
+      - "mysql"
+      - "frontend"
+
+    command: sh -c "/wait && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
+
+    environment:
+      - WAIT_HOSTS=mysql:3306
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=5
+      - WAIT_HOST_CONNECT_TIMEOUT=5
+    
+    ports:
+      - "8000:8000"
+    networks:
+      - micro_computers
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - micro_computers
+    environment:
+      - MYSQL_ROOT_USER=root
+      - MYSQL_ROOT_PASSWORD=poopee
+      - MYSQL_DATABASE=micro_computers_db
+networks:
+  micro_computers:

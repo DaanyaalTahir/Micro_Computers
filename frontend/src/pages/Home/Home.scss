@@ -1,0 +1,34 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+
+  .headline_cont {
+    margin-bottom: 30px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://www.onlygfx.com/wp-content/uploads/2021/04/white-triangle-pattern-seamless-background-5.jpg");
+    .homepage_title {
+      max-width: 1000px;
+      .homepage_title_words {
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 4rem;
+        padding: 5px 20px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        width: fit-content;
+        line-height: 1;
+      }
+      .highlighted_text {
+        color: #155e9b;
+      }
+    }
+  }
+
+  .home_content {
+  }
+}

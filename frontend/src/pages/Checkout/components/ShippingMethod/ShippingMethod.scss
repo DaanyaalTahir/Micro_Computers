@@ -1,0 +1,26 @@
+.shipping-method {
+  h5 {
+    padding: 30px 0px;
+  }
+
+  .shipping-options-container {
+    border: 1px solid rgba(189, 189, 189, 0.527);
+    border-radius: 5px;
+    :not(:last-child).shipping-option {
+      border-bottom: 1px solid rgba(145, 145, 155, 0.377);
+    }
+    .shipping-option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px;
+      svg {
+        margin-right: 10px;
+      }
+      .filled-circle {
+        --tw-bg-opacity: 1;
+        color: rgb(138 0 252 / var(--tw-bg-opacity)) !important;
+      }
+    }
+  }
+}

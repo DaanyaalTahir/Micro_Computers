@@ -1,0 +1,15 @@
+FROM  python:3.8
+
+WORKDIR /app
+
+COPY requirements.txt ./
+
+COPY server/ ./
+
+RUN pip install -r requirements.txt
+# INSTALLS WAITING
+ENV WAIT_VERSION 2.7.2
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/$WAIT_VERSION/wait /wait
+RUN chmod +x /wait
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
