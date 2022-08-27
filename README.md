@@ -1,4 +1,5 @@
 # Micro Computers
+E-commerce website for purchasing electronics such as computers and accessories. 
 Developed by: Daanyaal Tahir & Zain Afzal
 
 ## Stack
